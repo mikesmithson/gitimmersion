@@ -1,4 +1,6 @@
 # Default is "World"
 # Author: Mike Smithson (msmithso@ford.com)
+require './greeter'
 name = ARGV.shift || 'World!'
-puts "Hello, #{name}"
+greeter = Greeter.new(name)
+puts greeter.greet
